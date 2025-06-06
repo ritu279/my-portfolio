@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritu Bhat - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/your-photo.jpg" alt="Ritu Bhat" class="logo-img" />
+      <span>Ritu Bhat</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="right">
+        <img src="assets/your-photo.jpg" alt="Ritu Bhat" class="profile-pic-large" />
+      </div>
+      <div class="left intro-text">
+        <h1>I’m Ritu Bhat, a Medical Electronics Engineer passionate about AI & Healthcare.</h1>
+        <p>Currently a third-year student at Ramaiah Institute of Technology, Bangalore pursuing a Bachelor's degree in Medical Electronics with a Minor in Artificial Intelligence. I strive to build impactful healthcare solutions and innovative technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+  <div class="container animate"></div>
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Ritu Bhat</strong>, a passionate Medical Electronics Engineer dedicated to leveraging technology to improve healthcare.</p>
+    <p>In a world full of changing seasons, I’m someone who embraces every challenge—just like my name, Ritu, which symbolizes change and resilience.</p>
+    <p>I’m currently in my third year of pursuing a Bachelor’s degree in Medical Electronics at Ramaiah Institute of Technology, Bangalore. Alongside my core studies, I’m also pursuing a Minor degree in Artificial Intelligence, which allows me to explore how intelligent systems can enhance healthcare innovation.</p>
+    <p>With a strong interest in both Electronics and Software, I’m passionate about building solutions that bridge technology and human wellbeing. I believe in combining knowledge with curiosity and am always eager to explore new ideas, collaborate on impactful projects, and grow as a problem-solver.</p>
+  </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+  <div class="container animate"></div>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Observation Internship - Ramiah Memorial Hospital</h3>
+    <p>During my internship at Ramiah Memorial Hospital, I observed various diagnostic and therapeutic procedures, explored the integration of biomedical devices in clinical settings, and gained valuable insights into hospital workflows.</p>
+
+    <div class="report-buttons">
+   <a href="assets/Ramaiah Hospital Internship Report.pdf" target="_blank" class="btn view-btn">
+    <i class="fas fa-eye"></i> View Report
+  </a>
+  <a href="assets/Ramaiah Hospital Internship Report.pdf" download class="btn download-btn">
+    <i class="fas fa-download"></i> Download Report
+  </a>
+ </div>
+  </div>
+ </section>
+
+  <section id="resume" class="resume-section">
+    <div class="container animate">
+      <h2>Resume</h2>
+      <p>You can view or download my resume below:</p>
+      <div class="resume-buttons">
+        <a href="assets/Ritu_Bhat_Resume.pdf" target="_blank" class="btn view-btn">
+          <i class="fas fa-eye"></i> View Resume
+        </a>
+        <a href="assets/Ritu_Bhat_Resume.pdf" download class="btn download-btn">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+  <div class="container animate"></div>
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me or just to connect.</p>
+
+    <div class="contact-buttons">
+      <a href="tel:9113555989" class="btn contact-btn">
+        <i class="fas fa-phone"></i> 9113555989
+      </a>
+      <a href="mailto:ritubhat2794@gmail.com" class="btn contact-btn">
+        <i class="fas fa-envelope"></i> ritubhat2794@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/ritu-bhat-135a63320" target="_blank" class="btn contact-btn">
+        <i class="fab fa-linkedin"></i> linkedin.com/in/ritubhat
+      </a>
+    </div>
+  </div>
+ </section>
+
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js config loaded');
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
