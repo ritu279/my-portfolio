@@ -226,32 +226,6 @@ nav ul li a:hover {
   box-shadow: 0 0 40px #a678f088;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .left,
-  .right {
-    max-width: 100%;
-  }
-
-  .right .profile-pic {
-    margin: auto;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar {
-    padding: 10px 20px;
-  }
-}
-
 /* === Section Base Styling === */
 .about-container, .projects-section, .resume-section, #contact {
   max-width: 900px;
@@ -386,5 +360,82 @@ nav ul li a:hover {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* === Mobile Optimizations (below 768px) === */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .left h1 {
+    font-size: 1.8rem;
+  }
+
+  .left h2 {
+    font-size: 1.4rem;
+  }
+
+  .left h3 {
+    font-size: 1.3rem;
+  }
+
+  .right .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+  }
+
+  .about-container,
+  .projects-section,
+  .resume-section,
+  #contact {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .project h3 {
+    font-size: 1.4rem;
+  }
+
+  .project p {
+    font-size: 1rem;
+  }
+
+  .report-buttons,
+  .resume-buttons,
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
   }
 }
